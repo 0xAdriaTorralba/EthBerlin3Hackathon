@@ -10,8 +10,8 @@ template RangeProof() {
 
     // Operations
     threshold <-- times*price;
-    aux <-- threshold <= times*salary ? 1 : 0;  // 1 -> Your times*salary is greater than the requested threshold.
-                                                // 0 -> Otherwise.
+    aux <-- threshold <= salary ? 1 : 0;  // 1 -> Your salary is greater than the requested threshold = times*price.
+                                          // 0 -> Otherwise.
 
     // Constraints
     result <== aux*1 + 0; 

@@ -8,6 +8,12 @@ NUM_PARAM=3
 # Variable to store the number of the ptau file
 PTAU=12
 
+if [ "$1" = "-h" ]; then
+    echo "Usage for 3 inputs: sh generateWitness.sh <circuit name> <salary> <times> <price>"
+    echo "Usage for 1 input: sh generateWitness.sh <circuit name> <age>"
+    exit
+fi
+
 # In case there is a circuit name as an input
 if [ "$1" ]; then
     CIRCUIT=$1
